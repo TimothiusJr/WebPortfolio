@@ -16,39 +16,47 @@
 
 <body>
   <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#intro">Home</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <nav class="navbar">
+      <div class="nav-left">
+        <h1 class="logo">Tee-jay Salmon</h1>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fas fa-pen"></i></a>
+      </div>
     </nav>
-  </header>
+  </header>  
+
 
   <main>
 
     <!-- HERO -->
-    <section id="intro" class="section hero">
-      <h1 class="intro-title">
-        Hey, it’s me <span class="intro-name">Tee-jay</span>.
-      </h1>
-
-      <p class="intro-subtitle">
-        Computer Science major building full-stack projects.
-      </p>
-
-      <p class="intro-desc">
-        Interested in AI, human-computer interaction, and where science meets technology.
-      </p>
-
-      <div class="intro-actions">
-        <a class="btn" href="mailto:timotheussalmon@gmail.com">Say hi</a>
-        <a class="btn btn-ghost" href="https://github.com/teejaysalmon" target="_blank" rel="noopener">
-          GitHub
+    <section id="intro" class="section">
+      <div class="intro-content">
+        <h1 class="intro-title">
+          hey, <span class="intro-name">its me tee-jay</span>.<span class="cursor">|</span>
+        </h1>
+        <p class="intro-desc">
+          I'm a computer science student and patient care technician balancing demanding 12-hour shifts with real-world technical projects in AI, cybersecurity, and healthcare tech.
+        </p>
+        <a href="#contact" class="cta-button">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M4 4h16v16H4z" />
+            <path d="M22,6 12,13 2,6" />
+          </svg>
+          Say hi!
         </a>
       </div>
     </section>
-
+    
     <!-- ABOUT -->
     <section id="about" class="section">
       <div class="section-header">
@@ -110,10 +118,12 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
-      <h2 class="section-title">
-        <span class="highlight-slash">/</span> projects
-        <span class="section-divider"></span>
-      </h2>
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="highlight-slash">/</span> projects
+          <span class="section-divider"></span>
+        </h2>
+      </div>
 
       <article class="card">
         <h3>QuizzyQuest</h3>
@@ -129,25 +139,28 @@
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-      <h2 class="section-title">
-        <span class="highlight-slash">/</span> contact
-        <span class="section-divider"></span>
-      </h2>
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="highlight-slash">/</span> contact
+          <span class="section-divider"></span>
+        </h2>
+      </div>
 
-      <p>
-        Email:
-        <a href="mailto:timotheussalmon@gmail.com">
-          timotheussalmon@gmail.com
-        </a>
-      </p>
-      <p>
-        LinkedIn:
-        <a href="https://linkedin.com/in/teejaysalmon" target="_blank" rel="noopener">
-          Profile
-        </a>
-      </p>
+      <div class="contact-content">
+        <p>
+          Email:
+          <a href="mailto:timotheussalmon@gmail.com">
+            timotheussalmon@gmail.com
+          </a>
+        </p>
+        <p>
+          LinkedIn:
+          <a href="https://linkedin.com/in/teejaysalmon" target="_blank" rel="noopener">
+            Profile
+          </a>
+        </p>
+      </div>
     </section>
-
   </main>
 
   <footer class="site-footer">

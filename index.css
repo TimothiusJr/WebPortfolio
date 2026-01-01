@@ -22,17 +22,71 @@ body {
 }
 
 /* ===================== */
-/* LAYOUT */
+/* NAVIGATION BAR */
 /* ===================== */
 
-.App {
-  min-height: 100vh;
+.site-header {
+  background-color: var(--bg);
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 }
 
-#content {
-  width: 100%;
-  overflow-x: hidden;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+/* Left group: name + links */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--lightslate);
+  letter-spacing: 0.5px;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: var(--slate);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--scarlett);
+}
+
+/* Right icons */
+.nav-right a {
+  color: var(--slate);
+  font-size: 1rem;
+  margin-left: 20px;
+  transition: color 0.25s ease;
+}
+
+.nav-right a:hover {
+  color: var(--scarlett);
+}
+
 
 /* ===================== */
 /* HERO */
@@ -68,6 +122,49 @@ body {
   max-width: 62ch;
   color: var(--slate);
 }
+.intro-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+
+.cursor {
+  color: var(--scarlett);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  padding: 12px 24px;
+  color: var(--scarlett);
+  border: 1px solid var(--scarlett);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background: transparent;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: var(--scarlett);
+  color: var(--bg);
+}
+
+.cta-button svg.icon-mail {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
 
 /* ===================== */
 /* LINKS */
@@ -185,7 +282,7 @@ a:hover {
 }
 
 /* ===================== */
-/* EXPERIENCE SECTION (Same layout as ABOUT) */
+/* EXPERIENCE SECTION */
 /* ===================== */
 
 #experience {
@@ -193,8 +290,6 @@ a:hover {
   max-width: 1400px;
   margin: 0 auto;
 }
-
-/* You can use .section-header and .section-title here as-is */
 
 .experience-content {
   display: flex;
@@ -207,6 +302,41 @@ a:hover {
 .experience-item {
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===================== */
+/* PROJECTS SECTION */
+/* ===================== */
+
+#projects {
+  padding: 80px 15% 100px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ===================== */
+/* CONTACT SECTION */
+/* ===================== */
+
+#contact {
+  padding: 80px 15% 100px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#contact article.card {
+  font-size: clamp(16px, 1.6vw, 20px);
+  color: var(--slate);
+}
+
+#contact a {
+  color: var(--scarlett);
 }
 
 /* ===================== */
@@ -233,7 +363,9 @@ a:hover {
 @media (max-width: 900px) {
   #intro,
   #about,
-  #experience {
+  #experience,
+  #projects,
+  #contact {
     padding-left: 7%;
     padding-right: 7%;
   }
@@ -256,3 +388,8 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+  
+html {
+  scroll-behavior: smooth;
+}
+
