@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tee-jay | Portfolio</title>
+  <title>🧬Tee-jay</title>
 
   <meta name="description" content="Portfolio of Tee-jay Salmon, a Computer Science major building full-stack software.">
   <meta name="theme-color" content="#643E46">
@@ -11,30 +11,42 @@
   <link rel="stylesheet" href="index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Bubbler+One&family=Fuzzy+Bubbles:wght@700&display=swap" rel="stylesheet">
+
+  <script>
+    function showExperience(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      const panels = document.querySelectorAll('.experience-panel');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      panels.forEach(panel => panel.classList.remove('active'));
+
+      document.querySelector(`.tab[onclick="showExperience('${tabId}')"]`).classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
 </head>
 
 <body>
   <header class="site-header">
     <nav class="navbar">
       <div class="nav-left">
-        <h1 class="logo">Tee-jay Salmon</h1>
+        <div class="logo">Tee-jay Salmon</div>
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
+          <li><a href="#intro">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fas fa-pen"></i></a>
+        <a href="mailto:timotheussalmon@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/TimothiusJr" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/tee-jay-salmon-08a605176/" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
     </nav>
-  </header>  
-
+  </header>
 
   <main>
 
@@ -45,9 +57,9 @@
           hey, <span class="intro-name">its me tee-jay</span>.<span class="cursor">|</span>
         </h1>
         <p class="intro-desc">
-          I'm a computer science student and patient care technician balancing demanding 12-hour shifts with real-world technical projects in AI, cybersecurity, and healthcare tech.
-        </p>
-        <a href="#contact" class="cta-button">
+          I'm an Aspiring software engineer and creative based in New Jersey, building systems at the intersection of healthcare, aviation, and education. 
+          I’ve contributed to projects supporting real-time navigation, patient care, and student learning, as well full-time employee at Jersey Shore University Medical Center.</p>
+        <a href="mailto:timotheussalmon@gmail.com" class="cta-button">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M4 4h16v16H4z" />
             <path d="M22,6 12,13 2,6" />
@@ -56,7 +68,7 @@
         </a>
       </div>
     </section>
-    
+
     <!-- ABOUT -->
     <section id="about" class="section">
       <div class="section-header">
@@ -69,18 +81,13 @@
       <div class="about-content">
         <div class="about-description">
           <p>
-            I’m currently a <strong>Computer Science major</strong> building full-stack software.
-            I also work at <strong>Jersey Shore University Medical Center</strong> as a Patient Care Technician,
-            and actively explore fields like <strong>AI, HCI, and cloud security</strong>.
+            I’m currently a <strong>Computer Science major</strong> at <strong>Rutgers University</strong>,
+            balancing a full-time role as a <strong>Patient Care Technician</strong> at
+            <strong>Jersey Shore University Medical Center</strong> while building real-world technical projects.
+            I’ve developed and deployed applications like <strong>QuizzyQuest</strong>, a Django-based quiz platform,
+            and worked on AI navigation systems during my internship at <strong>LuftCar</strong>.
           </p>
-
-          <p>
-            Outside of school and work, I like exploring different cultures,
-            reading thought-provoking books, and competing in games that challenge my focus and timing.
-          </p>
-
           <p>Here are some technologies I’ve been working with:</p>
-
           <ul>
             <li>Python</li>
             <li>Django</li>
@@ -89,8 +96,12 @@
             <li>MySQL</li>
             <li>Java</li>
           </ul>
+          <p>
+            Outside of coding, I’m into pickleball, exploring different cultures, and working on my fitness
+            and personal finance goals. Oh, and i’m also a proud member of <strong>Sigma Phi Delta</strong>, 
+            where I’ve been recognized as the Cofounder of the fraternity.
+          </p>      
         </div>
-
         <div class="about-image">
           <img src="webimage/profile.png" alt="Portrait of Tee-jay Salmon">
         </div>
@@ -105,16 +116,51 @@
           <span class="section-divider"></span>
         </h2>
       </div>
-
-      <article class="card">
-        <h3>Patient Care Technician — Jersey Shore University Medical Center</h3>
-        <p class="muted">2024 – Present</p>
-        <ul>
-          <li>Support patient care on a fast-paced unit during 12-hour shifts.</li>
-          <li>Coordinate with nurses and staff to handle high-priority tasks.</li>
+    
+      <div class="experience-content">
+        <ul class="experience-tabs">
+          <li class="tab active" onclick="showExperience('luftcar')">LUFTCAR</li>
+          <li class="tab" onclick="showExperience('pct')">PATIENT CARE TECH</li>
+          <li class="tab" onclick="showExperience('guardian')">GUARDIAN LIFE</li>
         </ul>
-      </article>
+    
+        <div class="experience-details">
+          <!-- LuftCar Panel -->
+          <div id="luftcar" class="experience-panel active">
+            <h3 class="role">AI Intern <span class="company">@ LuftCar</span></h3>
+            <p class="date">May 2025 – Aug 2025</p>
+            <ul class="bullets">
+              <li>Researched AI integration into control systems for autonomous navigation and flight path optimization.</li>
+              <li>Explored ML techniques for simulating takeoff, mid-flight, and landing phases using physics-based and data-driven models.</li>
+              <li>Collaborated with engineers on safe route planning and AI-driven decision making in dynamic air traffic conditions.</li>
+            </ul>
+          </div>
+    
+          <!-- Patient Care Technician Panel -->
+          <div id="pct" class="experience-panel">
+            <h3 class="role">Patient Care Technician <span class="company">@ Jersey Shore University Medical Center</span></h3>
+            <p class="date">2023 – Present</p>
+            <ul class="bullets">
+              <li>Deliver hands-on patient care during 12-hour shifts in fast-paced hospital environments.</li>
+              <li>Support nurses and physicians in critical care tasks including vital monitoring, mobility assistance, and patient hygiene.</li>
+              <li>Communicate patient needs clearly to clinical staff, helping improve care outcomes and patient satisfaction.</li>
+            </ul>
+          </div>
+    
+          <!-- Guardian Life Panel -->
+          <div id="guardian" class="experience-panel">
+            <h3 class="role">Software Engineer Shadow <span class="company">@ Guardian Life</span></h3>
+            <p class="date">Nov 2023</p>
+            <ul class="bullets">
+              <li>Shadowed a software engineer to observe agile development cycles and enterprise-level systems architecture.</li>
+              <li>Participated in code reviews, sprint planning, and backend debugging using Python and SQL tooling.</li>
+              <li>Gained insight into long-term maintainability and production-readiness of real-world software solutions.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
+    
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
@@ -129,42 +175,13 @@
         <h3>QuizzyQuest</h3>
         <p>Quiz platform where users create and take quizzes.</p>
         <p class="muted">Django • MySQL • HTML • CSS</p>
-
-        <div class="card-links">
-          <a href="https://github.com/teejaysalmon" target="_blank" rel="noopener">GitHub</a>
-          <a href="#" target="_blank" rel="noopener">Live Demo</a>
-        </div>
       </article>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="section-header">
-        <h2 class="section-title">
-          <span class="highlight-slash">/</span> contact
-          <span class="section-divider"></span>
-        </h2>
-      </div>
-
-      <div class="contact-content">
-        <p>
-          Email:
-          <a href="mailto:timotheussalmon@gmail.com">
-            timotheussalmon@gmail.com
-          </a>
-        </p>
-        <p>
-          LinkedIn:
-          <a href="https://linkedin.com/in/teejaysalmon" target="_blank" rel="noopener">
-            Profile
-          </a>
-        </p>
-      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Tee-jay Salmon</p>
-  </footer>
+    <p>Built and designed by Tee-jay Salmon.</p>
+    <p>All rights reserved. ©</p>
+  </footer>  
 </body>
 </html>
