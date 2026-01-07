@@ -6,13 +6,14 @@
   <title>🧬Tee-jay</title>
 
   <meta name="description" content="Portfolio of Tee-jay Salmon, a Computer Science major building full-stack software.">
-  <meta name="theme-color" content="#643E46">
+  <meta name="theme-color" content="#0a192f">
 
   <link rel="stylesheet" href="index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Bubbler+One&family=Fuzzy+Bubbles:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <script>
     function showExperience(tabId) {
@@ -116,14 +117,14 @@
           <span class="section-divider"></span>
         </h2>
       </div>
-    
+
       <div class="experience-content">
         <ul class="experience-tabs">
           <li class="tab active" onclick="showExperience('luftcar')">LUFTCAR</li>
           <li class="tab" onclick="showExperience('pct')">PATIENT CARE TECH</li>
           <li class="tab" onclick="showExperience('guardian')">GUARDIAN LIFE</li>
         </ul>
-    
+
         <div class="experience-details">
           <!-- LuftCar Panel -->
           <div id="luftcar" class="experience-panel active">
@@ -135,7 +136,7 @@
               <li>Collaborated with engineers on safe route planning and AI-driven decision making in dynamic air traffic conditions.</li>
             </ul>
           </div>
-    
+
           <!-- Patient Care Technician Panel -->
           <div id="pct" class="experience-panel">
             <h3 class="role">Patient Care Technician <span class="company">@ Jersey Shore University Medical Center</span></h3>
@@ -146,7 +147,7 @@
               <li>Communicate patient needs clearly to clinical staff, helping improve care outcomes and patient satisfaction.</li>
             </ul>
           </div>
-    
+
           <!-- Guardian Life Panel -->
           <div id="guardian" class="experience-panel">
             <h3 class="role">Software Engineer Shadow <span class="company">@ Guardian Life</span></h3>
@@ -160,7 +161,6 @@
         </div>
       </div>
     </section>
-    
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
@@ -171,11 +171,93 @@
         </h2>
       </div>
 
-      <article class="card">
-        <h3>QuizzyQuest</h3>
-        <p>Quiz platform where users create and take quizzes.</p>
-        <p class="muted">Django • MySQL • HTML • CSS</p>
-      </article>
+      <div class="carousel-container">
+        <div class="carousel-slide active">
+          <img src="webimage/" alt="Studious Project" />
+          <h3>Studious</h3>
+          <p>An academic workload planner and collaboration app for students.</p>
+          <p class="tech-stack">Python, Django, MySQL, HTML/CSS/JS</p>
+          <div class="carousel-icons">
+            <a href="https://github.com/yourusername/studious" target="_blank">GitHub</a>
+            <a href="https://studious.app" target="_blank">Live</a>
+          </div>
+        </div>
+      
+        <div class="carousel-slide">
+          <img src="images/quizzyquest.png" alt="Quizzy Quest Project" />
+          <h3>Quizzy Quest</h3>
+          <p>A quiz platform that lets users create, take, and share quizzes.</p>
+          <p class="tech-stack">React.js, Django, MySQL</p>
+          <div class="carousel-icons">
+            <a href="https://github.com/yourusername/quizzyquest" target="_blank">GitHub</a>
+            <a href="https://quizzyquest.app" target="_blank">Live</a>
+          </div>
+        </div>
+      
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+      
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-card__top">
+            <i class="fa fa-folder project-icon"></i>
+            <div class="project-links">
+              <a href="https://github.com/TimothiusJr" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://liveproject1.com" target="_blank"><i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Studious</h3>
+            <p class="project-description">
+              A student productivity web app that helps users manage assignments, track deadlines, and collaborate with peers.
+            </p>
+            <p class="project-tech">Python (Django), HTML/CSS, JavaScript</p>
+        </div>
+    
+        <div class="project-card">
+          <div class="project-card__top">
+            <i class="fa fa-folder project-icon"></i>
+            <div class="project-links">
+              <a href="https://github.com/TimothiusJr" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://liveproject2.com" target="_blank"><i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">QuizzyQuest</h3>
+            <p class="project-description">
+              An interactive quiz platform for creating, sharing, and attempting quizzes across academic and casual topics.
+            </p>
+            <p class="project-tech">Python (Django), MySQL, JavaScript, HTML/CSS</p>
+        </div>
+    
+        <div class="project-card">
+          <div class="project-card__top">
+            <i class="fa fa-folder project-icon"></i>
+            <div class="project-links">
+              <a href="https://github.com/TimothiusJr" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Distributed Logging and Monitoring System</h3>
+          <p class="project-description">
+            A system that establishes an ORM connection to a Prisma client in order to communicate logs from microservices.
+          </p>
+          <p class="project-tech">Node.js (Express.js), React.js, PostgreSQL</p>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-card__top">
+            <i class="fa fa-folder project-icon"></i>
+            <div class="project-links">
+              <a href="https://github.com/TimothiusJr" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Distributed Logging and Monitoring System</h3>
+          <p class="project-description">
+            A system that establishes an ORM connection to a Prisma client in order to communicate logs from microservices.
+          </p>
+          <p class="project-tech">Node.js (Express.js), React.js, PostgreSQL</p>
+        </div>
+      </div>
     </section>
   </main>
 
