@@ -368,69 +368,81 @@ a:hover {
   margin: 0 auto;
 }
 
-.carousel-container {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.carousel-slide {
-  display: none;
-  padding: 2rem;
+.project-carousel {
+  background-color: #0a192f;
+  padding: 4rem 0;
   text-align: center;
-  background-color: #1e2a3a;
-  color: #e1e8f0;
-  transition: all 0.5s ease;
+  color: #ccd6f6;
+  font-family: 'Fira Code', 'Courier New', monospace;
 }
 
-.carousel-slide.active {
-  display: block;
+.carousel-item {
+  position: relative;
 }
 
-.carousel-slide img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 12px;
+.caption-bg {
+  background-color: #112240;
+  margin: auto;
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-top: -100px;
+  box-shadow: 0 20px 30px -10px rgba(2, 12, 27, 0.7);
+}
+
+.carousel-caption h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.carousel-caption p {
+  color: #8892b0;
+  font-size: 1rem;
+  line-height: 1.5;
   margin-bottom: 1rem;
 }
 
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #00000088;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: 50%;
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
-}
-
-.carousel-icons a {
-  margin: 0 10px;
+.techStack {
   color: #64ffda;
-  text-decoration: none;
   font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
 }
 
-.tech-stack {
+.external-links a {
+  margin: 0 1rem;
+  text-decoration: none;
   color: #64ffda;
-  font-family: monospace;
-  margin: 1rem 0;
+  font-weight: 500;
 }
+
+.external-links a:hover {
+  text-decoration: underline;
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(100, 255, 218, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 50% 50%;
+}
+
+/* Carousel indicators */
+.carousel-indicators li {
+  background-color: #64ffda;
+  opacity: 0.3;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
+
+
 
 
 .project-list {
@@ -454,9 +466,10 @@ a:hover {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; /* or whatever spacing you like */
 }
+
 
 .project-card {
   background-color: #112240;
@@ -556,6 +569,19 @@ a:hover {
     padding-left: 7%;
     padding-right: 7%;
   }
+
+  @media (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
 
   .about-content {
     flex-direction: column;
