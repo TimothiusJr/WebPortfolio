@@ -377,8 +377,16 @@ a:hover {
 }
 
 .carousel-item {
-  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
 }
+
+.carousel-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #64ffda, 0 10px 30px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
 
 .caption-bg {
   background-color: #112240;
